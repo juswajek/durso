@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" class="light" id="darkmode">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style> -->
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <title>DORSU</title>
+</head>
+
+<body class="bg-gray-200 dark:bg-slate-900 text-white font-sans">
+
+
+    <header class="bg-cover bg-center bg-[url('images/background.jpg')] h-screen">
+        <div class="bg-blue-900 drop-shadow-lg opacity-95 dark:bg-slate-900 sticky top-0">
+            <nav
+                class="p-5 md:flex md:items-center md:justify-between container m-auto w-full bg-blue-900 dark:bg-slate-900">
+                <div class="flex justify-between items-center mr-3">
+                    <span class="font-[Poppins] cursor-pointer">
+                        <img class="h-10 inline w-full" src="images/logo.png">
+                    </span>
+                    <span class="md:hidden ml-5 text-bolder text-lg">DAVAO ORIENTAL STATE <span
+                            class="text-yellow-300">UNIVERSITY</span></span>
+
+                    <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                        <ion-icon name="grid-outline" onclick="Menu(this)"></ion-icon>
+
+                    </span>
+                </div>
+                <div class="m-auto">
+                    <ul
+                        class=" bg-gray-700 md:bg-blue-900 md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 dark:bg-gray-800 dark:md:bg-slate-900">
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block text-sm py-2 px-4">
+
+                                HOME
+
+                            </a>
+
+
+
+
+                        </li>
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block  text-sm py-2 px-4">
+
+                                ABOUT
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    History</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Vission,
+                                    Mission, Goals, Values</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Administration</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Board
+                                    of Regents</a>
+                            </div>
+
+
+                        </li>
+
+
+
+
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block text-sm py-2 px-4">
+
+                                ACADEMICS
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Academic Units</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Extension Campus
+                                </a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Graduate
+                                    School</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    University
+                                    Registrar</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Pre-school</a>
+                            </div>
+
+
+                        </li>
+
+
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block  text-sm py-2 px-4">
+
+                                RESEARCH
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Researches</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Extention
+                                    Programs</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Davao
+                                    Research Journal</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    IPTBM</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    International
+                                    Relations</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Linkages</a>
+                            </div>
+
+
+                        </li>
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block text-sm py-2 px-4">
+
+                                STUDENTS
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Student Services</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    USC</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Student
+                                    Publication</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    ULIRC</a>
+
+                            </div>
+
+
+                        </li>
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block text-sm py-2 px-4">
+
+                                RESOURCE
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Alumni Tracer</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Grades
+                                    Portal</a>
+
+                            </div>
+
+
+                        </li>
+                        <li
+                            class="my-2 md:my-0 duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block text-sm py-2 px-4">
+
+                                ADMISSIONS
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Admission Requirements</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Scholarships (FASST)</a>
+                            </div>
+
+
+                        </li>
+                        <li
+                            class="my-2 md:my-auto duration-75  block dropdown hover:border-yellow-300 hover:border-b-2 hover:bg-gray-600 hover:text-yellow-300 hover:mx-5
+                        
+                        md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
+
+                            <a href="" class="inline-block text-sm py-2 px-4">
+
+                                GRADE INQUIRY
+                                <span>
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </span>
+                            </a>
+
+                            <div
+                                class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
+
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Grade Inquiry 2</a>
+                                <a href=""
+                                    class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
+                                    Grade Inquiry 3</a>
+
+                            </div>
+
+
+                        </li>
+
+                        <li class="pointer-cursor my-2 md:my-0 blocks hover:text-white text-yellow-300                        
+                        md:px-0 md:py-0 md:hover:bg-blue-900 md:hover:mx-0 text-center dark:md:bg-slate-900">
+
+
+                            <button class="rounded-full duration-500" id="btn">
+
+                                <span class="sun" id="sun">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        strokeWidth={1.5} stroke="currentColor" className="scale-100" height="25"
+                                        width="25">
+                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                                    </svg>
+                                </span>
+
+                                <span class="hidden" id="moon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="scale-100" height="24"
+                                        width="24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                                    </svg>
+                                </span>
+
+                            </button>
+
+
+
+                        </li>
+
+
+
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <section>
+
+        <div class="container mt-20 pb-2 px-20 mx-auto my-auto">
+            <h1
+                class="text-center text-3xl font-bold underline decoration-yellow-400 underline-offset-8 text-slate-900 dark:text-white dark:decoration-yellow-300">
+                DAVAO ORIENTAL STATE UNIVERSITY <span class="text-slate-500 dark:text-yellow-300">NEWS</span> AND <span
+                    class="text-slate-500 dark:text-yellow-300">EVENTS</span></h1>
+        </div>
+
+
+
+        <!-- <div class="container py-10 px-10 mx-auto my-auto mt-5 mb-20 text-justify rounded-lg bg-slate-500/10">
+            <p class="text-slate-700 indent-10 dark:text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Magnam tempora quo culpa
+                ut, officiis similique,
+                laborum impedit laudantium praesentium magni eum, facilis sit iusto. Delectus eaque error velit dolorem
+                modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quo culpa ut, officiis
+                similique,
+                laborum impedit laudantium praesentium magni eum, facilis sit iusto. Delectus eaque error velit dolorem
+                modi. </p>
+            <p class="text-slate-700 indent-10 dark:text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Magnam tempora quo culpa
+                ut, officiis
+                similique,
+                laborum impedit laudantium praesentium magni eum, facilis sit iusto. Delectus eaque error velit dolorem
+                modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempora quo culpa ut, officiis
+                similique,
+                laborum impedit laudantium praesentium magni eum, facilis sit iusto. Delectus eaque error velit dolorem
+                modi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem earum illo similique. Distinctio
+                quia quae, modi ad, non sint hic cum exercitationem vitae, suscipit quibusdam numquam nemo adipisci
+                fugit minima?</p>
+        </div> -->
+        <div class="container m-auto my-10 p-2">
+
+
+            <div class="lg:flex">
+                <div
+                    class="lg:flex font-sans bg-gray-100 mx-5 my-5 rounded transition duration-300 shadow hover:shadow-sky-600/80 dark:bg-slate-800">
+                    <div class="flex-none lg:w-48">
+                        <img src="images/news1.jpg" alt=""
+                            class="rounded-t-lg lg:rounded-l w-full h-full object-cover" />
+                    </div>
+                    <div class="flex-auto p-6">
+                        <div class="flex flex-wrap">
+                            <h1 class="flex-auto text-lg font-semibold text-slate-900 dark:text-white"><a href="#"
+                                    target="_blank"
+                                    class="hover:underline hover:decoration-sky-400 dark:hover:underline dark:hover:decoration-sky-300/50 ">
+                                    US Pediatricians, DOrSU work toward reducing maternal, newborn mortality</a>
+                            </h1>
+                            <div class="text-sm text-slate-500 my-2">
+                                September 14, 2022
+                            </div>
+                        </div>
+
+
+                        <p class="text-sm text-slate-700 dark:text-slate-300">
+                            Pediatricians from Johns Hopkins University and the Institute of Nursing and Allied Health
+                            Sciences (INAHS) conducted a two-day training from September 13 to 14, 2022, at the
+                            university
+                            library for midwives, nurses, and nursing...
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="lg:flex font-sans bg-gray-100 mx-5 my-5 rounded transition duration-300 shadow hover:shadow-sky-600/80 dark:bg-slate-800">
+                    <div class="flex-none lg:w-48">
+                        <img src="images/news2.jpg" alt=""
+                            class="rounded-t-lg lg:rounded-l w-full h-full object-cover" />
+                    </div>
+                    <div class="flex-auto p-6">
+                        <div class="flex flex-wrap">
+                            <h1 class="flex-auto text-lg font-semibold text-slate-900 dark:text-white"><a href="#"
+                                    target="_blank"
+                                    class="hover:underline hover:decoration-sky-400 dark:hover:underline dark:hover:decoration-sky-300/50 ">
+                                    DOrSU, CCATI sign MOA for Tech-voc Training, Nat’l Certification Activities</a>
+                            </h1>
+                            <div class="text-sm text-slate-500 my-2">
+                                August 20, 2022
+                            </div>
+                        </div>
+
+
+                        <p class="text-sm text-slate-700 dark:text-slate-300">
+                            DOrSU President Roy G. Ponce and Career Centre Academie and Technological Institute, Inc.
+                            (CCATI)President Ms. Mary Jane P. Trinidad signed a Memorandum of Agreement covering
+                            technical vocationaltraining and national certification activities for the Bachelor...
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:flex">
+                <div
+                    class="lg:flex font-sans bg-gray-100 mx-5 my-5 rounded transition duration-300 shadow hover:shadow-sky-600/80 dark:bg-slate-800">
+                    <div class="flex-none lg:w-48">
+                        <img src="images/news3.jpg" alt=""
+                            class="rounded-t-lg lg:rounded-l w-full h-full object-cover" />
+                    </div>
+                    <div class="flex-auto p-6">
+                        <div class="flex flex-wrap">
+                            <h1 class="flex-auto text-lg font-semibold text-slate-900 dark:text-white"><a href="#"
+                                    target="_blank"
+                                    class="hover:underline hover:decoration-sky-400 dark:hover:underline dark:hover:decoration-sky-300/50 ">
+                                    French Scientist to engage as an Adjunct Professor at DOrSU</a>
+                            </h1>
+                            <div class="text-sm text-slate-500 my-2">
+                                August 19, 2022
+                            </div>
+                        </div>
+
+
+                        <p class="text-sm text-slate-700 dark:text-slate-300">
+                            The University of Malaysia Sabah Associate Professor Dr. Christophe Wiart will work as an
+                            adjunct professor at Davao Oriental State University, as confirmed by DOrSU President Dr.
+                            Roy G Ponce. During their initial conversation...
+
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="lg:flex font-sans bg-gray-100 mx-5 my-5 rounded transition duration-300 shadow hover:shadow-sky-600/80 dark:bg-slate-800">
+                    <div class="flex-none lg:w-48">
+                        <img src="images/news4.jpg" alt=""
+                            class="rounded-t-lg lg:rounded-l w-full h-full object-cover" />
+                    </div>
+                    <div class="flex-auto p-6">
+                        <div class="flex flex-wrap">
+                            <h1 class="flex-auto text-lg font-semibold text-slate-900 dark:text-white"><a href="#"
+                                    target="_blank"
+                                    class="hover:underline hover:decoration-sky-400 dark:hover:underline dark:hover:decoration-sky-300/50 ">
+                                    LGU-Baganga, DOrSU unveil building plan; sign MOA on 2M grant for Baganga Campus
+                                    Operations</a>
+                            </h1>
+                            <div class="text-sm text-slate-500 my-2">
+                                August 10, 2022
+                            </div>
+                        </div>
+
+
+                        <p class="text-sm text-slate-700 dark:text-slate-300">
+                            LGU-Baganga Mayor Ronald V. Lara and Davao Oriental State University President Dr. Roy G.
+                            Ponce unveiled the academic building plan for DOrSU-Baganga Campus and signed a Memorandum
+                            of Agreement on financial grant of two...
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+        <div class="mx-10">
+            <div class="container mx-auto my-20 border-b-2 border-slate-400 w-full"></div>
+        </div>
+
+        <!-- DORSU-INSTITUTES -->
+
+        <div class="container my-20 pb-2 px-20 mx-auto my-auto">
+            <h1
+                class="text-center text-3xl font-bold underline decoration-yellow-400 underline-offset-8 text-slate-900 dark:text-white dark:decoration-yellow-300">
+                DAVAO ORIENTAL STATE UNIVERSITY <span class="text-slate-500 dark:text-yellow-300">INSTITUTES</span></h1>
+        </div>
+
+        <div
+            class="mb-10 p-20 w-full bg-white shadow-md overflow-hidden dark:bg-slate-800 place-content-center transition-all ease-in duration-500">
+            <div class="container md:flex mx-auto">
+                <div
+                    class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale bg-gray-200 p-3 md:rounded-l-full md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
+                    <img class="h-fit w-full object-cover" src="images/ice.png" alt="Man looking at item at a store">
+                </div>
+                <div class="p-5 my-auto">
+                    <div class="uppercase tracking-wide text-sm text-orange-500 font-bold dark:text-slate text-2xl">
+                        INSTITUTE OF COMPUTING AND ENGINEERING</div>
+                    <a href="https://www.facebook.com/DOrSUice?fbclid=IwAR2_HrVtBGnZdtXAW6-oDi2dJabXciKEKp_k226BKObmXuKG_ZSRTf34ZLk&_rdc=1&_rdr"
+                        target="_blank"
+                        class="block mt-1 text-lg font-extrabold leading-tight font-medium text-black hover:underline dark:text-white underline decoration-orange-500 underline-offset-8">
+                        @ICE
+                    </a>
+                    <p class="mt-2 text-slate-500">Institute of Computing and Engineering of Davao Oriental State
+                        University has programs: BSCE, BITM, BSMATH, & BSIT.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-10 p-20 w-full overflow-hidden place-content-center">
+            <div class="container md:flex mx-auto">
+
+                <div class="p-5 my-auto text-right">
+                    <div class="uppercase tracking-wide text-sm text-red-800 font-bold dark:text-slate text-2xl">
+                        INSTITUTE OF BUSINESS AND PUBLIC AFFAIRS</div>
+                    <a href="https://www.facebook.com/people/Dorsu-Ibpa/100070858823312/?fbclid=IwAR2MPKg2UOeUw0LJRLsqPtdyw3uKdwqqXO8zAC91kKoiUtgbCttWeOZhAtA"
+                        target="_blank"
+                        class="block mt-1 text-lg font-extrabold leading-tight font-medium text-black hover:underline dark:text-white underline decoration-red-800 underline-offset-8">
+                        @IBPA
+                    </a>
+                    <p class="mt-2 text-slate-500">Institute of Business and Public Affairs is one of the institutes of
+                        Davao Oriental State University.</p>
+                </div>
+
+                <div
+                    class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale bg-white p-3 md:rounded-r-full md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
+                    <img class="h-fit w-full object-cover" src="images/ibpa.png" alt="Man looking at item at a store">
+                </div>
+
+            </div>
+        </div>
+
+        <div
+            class="mb-10 p-20 w-full bg-white shadow-md overflow-hidden dark:bg-slate-800 place-content-center transition-all ease-in duration-500">
+            <div class="container md:flex mx-auto">
+                <div
+                    class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale bg-gray-200 p-3 md:rounded-l-full md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
+                    <img class="h-fit w-full object-cover" src="images/iett.png" alt="Man looking at item at a store">
+                </div>
+                <div class="p-5 my-auto">
+                    <div class="uppercase tracking-wide text-sm text-blue-600 font-bold dark:text-slate text-2xl">
+                        INSTITUTE OF EDUCATION AND TEACHER TRAINING</div>
+                    <a href="https://www.facebook.com/IETTofficial?fbclid=IwAR2lBmDEa24Or_nDUfIkDpfbEiGUmPdLVbnYlf9Cywu4oB1okMpsla1bpdE"
+                        target="_blank"
+                        class="block mt-1 text-lg font-extrabold leading-tight font-medium text-black hover:underline dark:text-white underline decoration-blue-600 underline-offset-8">
+                        @IETT
+                    </a>
+                    <p class="mt-2 text-slate-500">Institute of Education and Teacher Training is one of the academic
+                        institutes of Davao Oriental State University.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-10 p-20 w-full overflow-hidden place-content-center">
+            <div class="container md:flex mx-auto">
+
+                <div class="p-5 my-auto text-right">
+                    <div class="uppercase tracking-wide text-sm text-green-700 font-bold dark:text-slate text-2xl">
+                        INSTITUTE OF AGRICULTURE AND LIFE SCIENCES</div>
+                    <a href="https://www.facebook.com/ials.dean/?fbclid=IwAR3ou8FfybhzvaoS3PaqvqgFxAzqTfr3-hXemt-snosLZW6b3yWN6COMLSI"
+                        target="_blank"
+                        class="block mt-1 text-lg font-extrabold leading-tight font-medium text-black hover:underline dark:text-white underline decoration-green-700 underline-offset-8">
+                        @IALS
+                    </a>
+                    <p class="mt-2 text-slate-500">Institute of Agriculture and Life Sciences of the Davao Oriental
+                        State University, Mati City, Davao Oriental.</p>
+                </div>
+
+                <div
+                    class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale bg-white p-3 md:rounded-r-full md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
+                    <img class="h-fit w-full object-cover" src="images/ials.png" alt="Man looking at item at a store">
+                </div>
+
+            </div>
+        </div>
+
+        <div
+            class="mb-10 p-20 w-full bg-white shadow-md overflow-hidden dark:bg-slate-800 place-content-center transition-all ease-in duration-500">
+            <div class="container md:flex mx-auto">
+                <div
+                    class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale bg-gray-200 p-3 md:rounded-l-full md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
+                    <img class="h-fit w-full object-cover" src="images/inahs.png" alt="Man looking at item at a store">
+                </div>
+                <div class="p-5 my-auto">
+                    <div class="uppercase tracking-wide text-sm text-yellow-400 font-bold dark:text-slate text-2xl">
+                        INSTITUTE OF NURSING AND ALLIED HEALTH SCIENCES</div>
+                    <a href="https://www.facebook.com/INAHS.Official" target="_blank"
+                        class="block mt-1 text-lg font-extrabold leading-tight font-medium text-black hover:underline dark:text-white underline decoration-yellow-400 underline-offset-8">
+                        @INAHS
+                    </a>
+                    <p class="mt-2 text-slate-500">The Davao Oriental State University (DOrSU) through its Institute of
+                        Nursing and Allied Health Sciences.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <br><br>
+
+    <aside>
+
+    </aside>
+
+
+    <footer>
+        <div class="px-10 py-5 mx-auto my-auto lg:flex">
+            <div
+                class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale p-2 md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
+                <img class="h-fit w-60 object-cover mx-auto" src="images/LOGO-2.png"
+                    alt="Man looking at item at a store">
+            </div>
+            <div class="p-5 my-auto mt-10 text-slate-900 text-center w-full">
+                <h1 class="text-center font-bold mb-1 text-slate-900 dark:text-slate-300">QUALITY <span
+                        class="text-slate-500 dark:text-yellow-300">POLICY</span></h1>
+                <p class="p-3 text-sm text-slate-600 dark:text-slate-500">DAVAO ORIENTAL STATE COLLEGE OF SCIENCE AND
+                    TECHNOLOGY is
+                    an educational institution established and
+                    sustained by quality education. It seeks to successfully implement and improve its Quality
+                    Management System (QMS) in order to better serve its students and the community, further
+                    contributing to nation building.</p>
+            </div>
+
+            <div class="p-5 my-auto mt-10 text-slate-900 text-center w-full">
+                <h1 class="text-center font-bold mb-1 text-slate-900 dark:text-slate-300">CAM<span
+                        class="text-slate-500 dark:text-yellow-300">PUSES</span></h1>
+
+                <ul class="text-slate-600 dark:text-slate-500">
+                    <li class="m-3"><a href="#" class="hover:text-sky-500 dark:hover:text-slate-300">BANAYBANAY
+                            CAMPUS</a></li>
+                    <li class="m-3"><a href="#" class="hover:text-sky-500 dark:hover:text-slate-300">CATEEL CAMPUS</a>
+                    </li>
+                    <li class="m-3"><a href="#" class="hover:text-sky-500 dark:hover:text-slate-300">SAN ISIDRO
+                            CAMPUS</a></li>
+                    <li class="m-3"><a href="#" class="hover:text-sky-500 dark:hover:text-slate-300">BAGANGA CAMPUS</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-5 my-auto mt-10 text-slate-900 text-justify w-full">
+                <h1 class="text-center font-bold text-slate-900 dark:text-slate-300">SOCIAL <span
+                        class="text-slate-500 dark:text-yellow-300">MEDIA</span></h1>
+                <ul class="flex p-10">
+
+                    <li
+                        class="mx-auto text-slate-600 hover:text-blue-600 text-3xl dark:text-slate-500 dark:hover:text-blue-600 transition duration-500">
+                        <a href="#">
+                            <ion-icon name="logo-facebook">
+                        </a></ion-icon>
+                    </li>
+                    <li
+                        class="mx-auto text-slate-600 hover:text-red-400 text-3xl dark:text-slate-500 dark:hover:text-red-400 transition duration-500">
+                        <a href="#">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a></ion-icon>
+                    <li
+                        class="mx-auto text-slate-600 hover:text-sky-500 text-3xl dark:text-slate-500 dark:hover:text-sky-500 transition duration-500">
+                        <a href="#">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a></ion-icon>
+                    <li
+                        class="mx-auto text-slate-600 hover:text-green-600 text-3xl dark:text-slate-500 dark:hover:text-green-600 transition duration-500">
+                        <a href="#">
+                            <ion-icon name="mail"></ion-icon>
+                        </a></ion-icon>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="container p-2 mx-auto my-auto text-center w-full">
+            <div class="py-5 my-auto mx-5 text-slate-600 border-t-2 border-slate-400 dark:text-white">
+                <p class="font-bold">COPYRIGHT &copy; 2022 | JOSUA JAKE P. SAAVEDRA</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function Menu(e) {
+            let list = document.querySelector('ul');
+            e.name === 'grid-outline' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "grid-outline", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+        }
+    </script>
+    <script>
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            let btn = document.querySelector('#btn');
+            let sun = document.querySelector('#sun');
+            let moon = document.querySelector('#moon');
+            let dark = document.querySelector('#darkmode');
+
+            btn.addEventListener('click', () => {
+
+                if (sun.classList.contains('sun')) {
+                    sun.classList.remove('sun');
+                    sun.classList.add('hidden');
+                    moon.classList.remove('hidden');
+                    moon.classList.add('moon');
+                    dark.classList.remove('light');
+                    dark.classList.add('dark');
+                } else {
+                    sun.classList.remove('hidden');
+                    sun.classList.add('sun');
+                    moon.classList.remove('moon');
+                    moon.classList.add('hidden');
+                    dark.classList.remove('dark');
+                    dark.classList.add('light');
+
+                }
+
+            });
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

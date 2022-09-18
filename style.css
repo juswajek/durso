@@ -1,0 +1,8 @@
+ .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+ header nav .m-auto ul li a {
+    font-size: 12px;
+  }
+
