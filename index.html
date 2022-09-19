@@ -11,6 +11,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script src="javascript.js" type="text/javascript"></script>
+
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
@@ -21,20 +23,6 @@
           }
         }
       </style> -->
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
-    </script>
-
 
     <title>DORSU</title>
 </head>
@@ -66,7 +54,7 @@
                         
                         md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
 
-                            <a href="" class="inline-block text-sm py-2 px-4">
+                            <a href="#" class="inline-block text-sm py-2 px-4">
 
                                 HOME
 
@@ -81,7 +69,7 @@
                         
                         md:px-0 md:py-0 md:hover:text-yellow-300 md:hover:border-b-2 md:hover:bg-blue-900 md:hover:mx-0 dark:md:bg-slate-900">
 
-                            <a href="" class="inline-block  text-sm py-2 px-4">
+                            <a href="#" class="inline-block  text-sm py-2 px-4">
 
                                 ABOUT
                                 <span>
@@ -92,17 +80,17 @@
                             <div
                                 class="mt-px hidden absolute z-[1] md:bg-gray-700 bg-gray-900 m-0 w-fit dropdown-content text-white dark:md:bg-gray-800">
 
-                                <a href=""
+                                <a href="history.html"
                                     class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
                                     History</a>
-                                <a href=""
+                                <a href="vmgv.html"
                                     class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
                                     Vission,
                                     Mission, Goals, Values</a>
-                                <a href=""
+                                <a href="administration.html"
                                     class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
                                     Administration</a>
-                                <a href=""
+                                <a href="boardofregents.html"
                                     class="px-4 py-2 hover:bg-gray-600 block hover:border-yellow-300 hover:border-b-2 hover:text-yellow-300">
                                     Board
                                     of Regents</a>
@@ -644,6 +632,16 @@
 
 
     <footer>
+
+        <div class="container mx-auto my-auto p-10 md:flex">
+            
+            <img class="m-auto p-5 md:w-full md:h-full object-cover" src="images/Info-magazine-300x113.jpg" alt="" srcset="">
+            <img class="m-auto p-5 md:w-full md:h-full object-cover" src="images/CAREER-OPP-1-300x113.png" alt="" srcset="">
+            <img class="m-auto p-5 md:w-full md:h-full object-cover" src="images/esip-300x251.png" alt="" srcset="">
+            <img class="m-auto p-5 md:w-full md:h-full object-cover" src="images/freedom-300x300.png" alt="" srcset="">
+            <img class="m-auto p-5 md:w-full md:h-full object-cover" src="images/openDataPh-300x121.png" alt="" srcset="">
+            <img class="m-auto p-5 md:w-full md:h-full object-cover" src="images/transparency-1-300x300.png" alt="" srcset="">
+        </div>
         <div class="px-10 py-5 mx-auto my-auto lg:flex">
             <div
                 class="transition ease-in-out duration-300 md:flex-shrink-0 grayscale-0 hover:grayscale p-2 md:my-auto md:mx-auto dark:grayscale dark:hover:grayscale-0">
@@ -716,48 +714,6 @@
         </div>
     </footer>
 
-
-    <script>
-        function Menu(e) {
-            let list = document.querySelector('ul');
-            e.name === 'grid-outline' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "grid-outline", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
-        }
-    </script>
-    <script>
-
-        window.addEventListener('DOMContentLoaded', () => {
-
-            let btn = document.querySelector('#btn');
-            let sun = document.querySelector('#sun');
-            let moon = document.querySelector('#moon');
-            let dark = document.querySelector('#darkmode');
-
-            btn.addEventListener('click', () => {
-
-                if (sun.classList.contains('sun')) {
-                    sun.classList.remove('sun');
-                    sun.classList.add('hidden');
-                    moon.classList.remove('hidden');
-                    moon.classList.add('moon');
-                    dark.classList.remove('light');
-                    dark.classList.add('dark');
-                } else {
-                    sun.classList.remove('hidden');
-                    sun.classList.add('sun');
-                    moon.classList.remove('moon');
-                    moon.classList.add('hidden');
-                    dark.classList.remove('dark');
-                    dark.classList.add('light');
-
-                }
-
-            });
-
-        });
-
-
-
-    </script>
 
 </body>
 
